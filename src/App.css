@@ -21,14 +21,14 @@ body {
 }
 
 .left-panel,
-.right-panel {
-  width: 50%; /* Cada columna ocupa la mitad del contenedor padre (.App) */
+.right-panel { 
   padding: 20px;
   box-sizing: border-box;
   padding-top: 120px;
 }
 
 .left-panel {
+  width: 30%; /* Cada columna ocupa la mitad del contenedor padre (.App) */
   background-color: transparent;
   position: sticky;
   top: 0;
@@ -39,6 +39,7 @@ body {
 }
 
 .right-panel {
+  width: 70%; /* Cada columna ocupa la mitad del contenedor padre (.App) */
   overflow-y: auto; /* Asegura que la columna derecha pueda desplazarse */
 }
 
@@ -175,4 +176,34 @@ p {
 .cv-link {
   text-decoration: none; /* Remove underline */
   color: #ffffff
+}
+
+.proyectos {
+  margin: 20px;
+}
+
+.proyectos h2 {
+  margin-bottom: 20px;
+}
+
+.proyectos p {
+  margin-bottom: 20px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-description {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.project-image img {
+  width: 150px; /* Adjust the size as needed */
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
