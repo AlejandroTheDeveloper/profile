@@ -1,38 +1,178 @@
+@font-face {
+  font-family: 'UrbaneCondensed'; /* Nombre que darás a la fuente */
+  src: url('./assets/fonts/Inter.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #076ab0; /* Fondo #076ab0 */
+  margin: 0;
+  padding: 0;
+  font-family: 'UrbaneCondensed', Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  width: 100%; /* Las columnas juntas ocupan el 50% del ancho total */
+  max-width: 1200px; /* Limitar el ancho máximo de .App */  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left-panel,
+.right-panel {
+  width: 50%; /* Cada columna ocupa la mitad del contenedor padre (.App) */
+  padding: 20px;
+  box-sizing: border-box;
+  padding-top: 120px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-panel {
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Altura completa del viewport para la columna izquierda */
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-panel {
+  overflow-y: auto; /* Asegura que la columna derecha pueda desplazarse */
+}
+
+.perfil img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: #ffffff;
+}
+
+p {
+  color: #f1f1f1;
+}
+
+
+.contacto p {
+  margin: 10px 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contacto a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.5rem; /* Aumentar el tamaño de los iconos */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contacto a:hover {
+  color: #cccccc;
+}
+
+.contacto svg {
+  margin: 0;
+  color: #ffffff;
+}
+
+.experience {
+  margin-top: 20px;
+}
+
+.experience-item {
+  display: flex;
+  position: relative;
+  text-decoration: none; /* Eliminar el subrayado del enlace */
+  color: #ffffff; /* Asegurar que el texto sea blanco */
+  margin-bottom: 20px; /* Espacio entre cada experiencia */
+  padding: 10px;
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+}
+
+.experience-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ligero cambio de color al pasar el mouse */
+}
+
+.experience-item:hover::after {
+  content: '↗'; /* Unicode arrow character */
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  font-size: 1.2em; /* Adjust size as needed */
+  color: inherit; /* Inherit text color */
+}
+
+.experience-date {
+  
+  padding: 0;
+  color: rgb(192, 192, 192); /* Gray color */
+}
+
+.experience-details {
+  flex: 3;
+  padding-left: 20px; /* Espacio entre la fecha y los detalles */
+}
+
+.experience-details h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.experience-details p {
+  margin: 5px 0 0 0;
+  color: #cccccc;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  color: #70fff3;
+  background-color: #12867d9d;
+  border: 1px solid #2fc0b4d3;
+  border-radius: 16px;
+  padding: 2px 8px;
+  margin-right: 5px;  
+  margin-top: 5px;  
+  font-size: 12px;
+}
+
+.cv-link {
+  text-decoration: none; /* Remove underline */
+  color: #ffffff
 }
