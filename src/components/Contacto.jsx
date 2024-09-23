@@ -7,13 +7,13 @@ const Contacto = () => {
   return (
     <div className="contacto">
       <p>
-        <a href="mailto:alejandroperrod@gmail.com">
+        <a href="mailto:alejandro.the.developer@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
         <a href="https://es.linkedin.com/pub/alejandro-p%C3%A9rez-rodr%C3%ADguez/42/566/731" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
-        <a href="https://www.instagram.com/tu_perfil" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/alexmcanawer/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
       </p>

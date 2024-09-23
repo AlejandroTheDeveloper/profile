@@ -4,15 +4,30 @@
   font-weight: normal;
   font-style: normal;
 }
+
 body {
-  background-color: #076ab0; /* Fondo #076ab0 */
+  background-color: rgb(15 23 42 / 1);; /* Fondo #076ab0 */  
   margin: 0;
   padding: 0;
   font-family: 'UrbaneCondensed', Arial, sans-serif;
-  color: #ffffff;
+  color: #c4c4c4;
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
 }
+
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+a {
+  color: #c4c4c4;
+  text-decoration: none;
+}
+
+a:hover, a.active  {
+  color: #ffffff;
+}
+
 
 .App {
   display: flex;
@@ -57,14 +72,6 @@ nav ul li {
   margin: 10px 0;
 }
 
-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  text-decoration: none;
-}
 
 nav ul li a.active {
   font-weight: bold;
@@ -74,15 +81,6 @@ section {
   margin-bottom: 40px;
 }
 
-h1, h2 {
-  color: #ffffff;
-}
-
-p {
-  color: #f1f1f1;
-}
-
-
 .contacto p {
   margin: 10px 0;
   display: flex;
@@ -91,70 +89,14 @@ p {
 }
 
 .contacto a {
-  color: #ffffff;
-  text-decoration: none;
   margin: 0 15px;
   font-size: 1.5rem; /* Aumentar el tamaño de los iconos */
 }
 
-.contacto a:hover {
-  color: #cccccc;
-}
 
 .contacto svg {
   margin: 0;
-  color: #ffffff;
-}
-
-.experience {
-  margin-top: 20px;
-}
-
-.experience-item {
-  display: flex;
-  position: relative;
-  text-decoration: none; /* Eliminar el subrayado del enlace */
-  color: #ffffff; /* Asegurar que el texto sea blanco */
-  margin-bottom: 20px; /* Espacio entre cada experiencia */
-  padding: 10px;
-  transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
-}
-
-.experience-item:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Ligero cambio de color al pasar el mouse */
-}
-
-.experience-item:hover::after {
-  content: '↗'; /* Unicode arrow character */
-  position: absolute;
-  right: 10px; /* Adjust as needed */
-  font-size: 1.2em; /* Adjust size as needed */
-  color: inherit; /* Inherit text color */
-}
-
-.experience-date {
-  
-  padding: 0;
-  color: rgb(192, 192, 192); /* Gray color */
-}
-
-.experience-details {
-  flex: 3;
-  padding-left: 20px; /* Espacio entre la fecha y los detalles */
-}
-
-.experience-details h3 {
-  margin: 0;
-  padding: 0;
-}
-
-.experience-details p {
-  margin: 5px 0 0 0;
-  color: #cccccc;
-}
-
-.experience-item {
-  margin-bottom: 20px;
+  /* color: #c0c0c0; */
 }
 
 .tags {
@@ -165,7 +107,7 @@ p {
   display: inline-block;
   color: #70fff3;
   background-color: #12867d9d;
-  border: 1px solid #2fc0b4d3;
+  /* border: 1px solid #2fc0b4d3; */
   border-radius: 16px;
   padding: 2px 8px;
   margin-right: 5px;  
@@ -175,11 +117,13 @@ p {
 
 .cv-link {
   text-decoration: none; /* Remove underline */
-  color: #ffffff
+  /* color: #ffffff */
 }
 
+/* Proyect tiles */
+
 .proyectos {
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .proyectos h2 {
@@ -190,10 +134,44 @@ p {
   margin-bottom: 20px;
 }
 
+.project-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+}
+
 .project {
   display: flex;
-  align-items: center;
+  align-items: top;
   margin-bottom: 20px;
+  position: relative; /* Ensure the pseudo-element is positioned relative to the item */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */  
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.project:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ligero cambio de color al pasar el mouse */
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.project:hover::after {
+  content: '↗'; /* Unicode arrow character pointing up and right */
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  font-size: 1.2em; /* Adjust size as needed */
+  color: inherit; /* Inherit text color */
+}
+
+.project:hover h3 {
+  color: #70fff3; /* Change title color on hover */
+}
+
+.project h3 {
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 0; /* Optionally remove bottom margin */
 }
 
 .project-description {
@@ -202,8 +180,113 @@ p {
 }
 
 .project-image img {
-  width: 150px; /* Adjust the size as needed */
-  height: auto;
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image covers the container */
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+/* Experience tiles */
+.experience-item {
+  display: flex;
+  align-items: flex-start; /* Align items by the top */
+  margin-bottom: 20px;
+  position: relative; /* Ensure the pseudo-element is positioned relative to the item */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  padding: 10px;
+  /* transition: background-color 0.3s ease; Efecto de transición al pasar el mouse */
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.experience-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.experience-date {
+  font-size: 0.8em; /* 0.8 of the rest of the text */
+  color: rgb(192, 192, 192); /* Gray color */
+  /* padding: 0; */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  margin-right: 20px; /* Add some space between date and details */
+}
+
+.experience-details {
+  flex: 1; /* Take up the remaining space */
+  margin: 0;
+}
+
+.experience-details h3 {
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 0; /* Optionally remove bottom margin */
+}
+
+
+.experience-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ligero cambio de color al pasar el mouse */
+}
+
+.experience-item:hover::after {
+  content: '↗'; /* Unicode arrow character pointing up and right */
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  font-size: 1.2em; /* Adjust size as needed */
+  color: inherit; /* Inherit text color */
+}
+
+.experience-item:hover h3 {
+  color: #70fff3; /* Change title color on hover */
+}
+
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .left-panel{
+    position: inherit;
+  }
+
+   
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    margin-bottom: 0;
+  }
+
+  .experience-item {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .experience-date {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+}
+
+
+
+
