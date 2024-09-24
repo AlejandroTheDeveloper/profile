@@ -9,7 +9,7 @@ const projects = [
     'These projects are not just side tasks; they represent my passion for exploring cutting-edge technologies and finding innovative ways to apply them.\n' +
     'I’ve been particularly excited about how Kotlin Multiplatform simplifies cross-platform development and how AI is reshaping the way we approach problem-solving in software engineering.',   
     image: pycerImage,
-    url: 'https://example.com/pycer' // Update with the correct URL
+    url: '' // Update with the correct URL
   },
   {
     name: 'Braineir',
@@ -29,19 +29,35 @@ const Proyectos = () => {
         I am currently working on multiple personal projects, learning about Kotlin Multiplatform, Compose, React, and most importantly, the usage of AI for development.
       </p>
       {projects.map((project, index) => (
-        <a key={index} href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
-          <div className="project">
-            <div className="project-description">
-              <h3>{project.name}</h3>
-              {project.description.split('\n').map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
+        project.url ? (
+          <a key={index} href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
+            <div className="project">
+              <div className="project-description">
+                <h3>{project.name}</h3>
+                {project.description.split('\n').map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+              </div>
+              <div className="project-image">
+                <img src={project.image} alt={`${project.name} Screenshot`} />
+              </div>
             </div>
-            <div className="project-image">
-              <img src={project.image} alt={`${project.name} Screenshot`} />
+          </a>
+        ) : (
+          <div key={index} className="project-link">
+            <div className="project">
+              <div className="project-description">
+                <h3>{project.name}</h3>
+                {project.description.split('\n').map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+              </div>
+              <div className="project-image">
+                <img src={project.image} alt={`${project.name} Screenshot`} />
+              </div>
             </div>
           </div>
-        </a>
+        )
       ))}
     </div>
   );

@@ -55,22 +55,41 @@ const Experience = () => {
     <div className="experience">
       <h2>Experience</h2>
       {experiences.map((experience, index) => (
-        <a key={index} href={experience.website} target="_blank" rel="noopener noreferrer" className="experience-item">
-          <div className="experience-date">
-            {experience.date}
-          </div>
-          <div className="experience-details">
-            <h3>{experience.company}</h3>
-            {experience.details.split('\n').map((line, i) => (
-              <p key={i}>{line}</p>
-            ))}
-            <div className="tags">
-              {experience.tags.map((tag, i) => (
-                <span key={i} className="tag">{tag}</span>
+        experience.website ? (
+          <a key={index} href={experience.website} target="_blank" rel="noopener noreferrer" className="experience-item">
+            <div className="experience-date">
+              {experience.date}
+            </div>
+            <div className="experience-details">
+              <h3>{experience.company}</h3>
+              {experience.details.split('\n').map((line, i) => (
+                <p key={i}>{line}</p>
               ))}
+              <div className="tags">
+                {experience.tags.map((tag, i) => (
+                  <span key={i} className="tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ) : (
+          <div key={index} className="experience-item">
+            <div className="experience-date">
+              {experience.date}
+            </div>
+            <div className="experience-details">
+              <h3>{experience.company}</h3>
+              {experience.details.split('\n').map((line, i) => (
+                <p key={i}>{line}</p>
+              ))}
+              <div className="tags">
+                {experience.tags.map((tag, i) => (
+                  <span key={i} className="tag">{tag}</span>
+                ))}
+              </div>
             </div>
           </div>
-        </a>
+        )
       ))}
       <a href="/resources/alejandro_cv_20240904.pdf" target="_blank" rel="noopener noreferrer" className="experience-item">
         <div className="cv-div">... and more</div>
