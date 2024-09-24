@@ -91,7 +91,7 @@ const Experience = () => {
           </div>
         )
       ))}
-      <a href="/resources/alejandro_cv_20240904.pdf" target="_blank" rel="noopener noreferrer" className="experience-item">
+      <a href="https://alejandroperrod.github.io/cv/alejandro_cv_20240904.pdf" target="_blank" rel="noopener noreferrer" className="experience-item">
         <div className="cv-div">... and more</div>
       </a>
     </div>
