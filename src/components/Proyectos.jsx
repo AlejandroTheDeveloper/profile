@@ -26,7 +26,7 @@ const Proyectos = () => {
     <div className="proyectos">
       <h2>Projects</h2>
       <p>
-        I am currently working on multiple personal projects, learning about Kotlin Multiplatform, Compose, React, and most importantly, the usage of AI for development. Some of these projects are Pycer and Braineir.
+        I am currently working on multiple personal projects, learning about Kotlin Multiplatform, Compose, React, and most importantly, the usage of AI for development.
       </p>
       {projects.map((project, index) => (
         <a key={index} href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
