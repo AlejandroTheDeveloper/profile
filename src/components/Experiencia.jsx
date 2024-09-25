@@ -50,6 +50,11 @@ const experiences = [
   },
 ];
 
+const handleRedirect = () => {
+  window.open('http://alejandrothedeveloper.github.io/cv/cv.pdf', '_blank', 'noopener,noreferrer');
+};
+
+
 const Experience = () => {
   return (
     <div className="experience">
@@ -91,7 +96,7 @@ const Experience = () => {
           </div>
         )
       ))}
-      <a href="https://alejandrothedeveloper.github.io/profile/alejandro_cv_20240904.pdf" target="_blank" rel="noopener noreferrer" className="experience-item">
+      <a href="https://alejandrothedeveloper.github.io/cv/cv.pdf" target="_blank" rel="noopener noreferrer" className="experience-item">
         <div className="cv-div">... and more</div>
       </a>
     </div>
