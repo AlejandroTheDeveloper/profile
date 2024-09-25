@@ -21,7 +21,7 @@ const experiences = [
             'Keycloak Authentication', 
             'Ticketing Systems', 
             'Cross-functional Collaboration', 
-            'Payment Systems'
+            'Payment System'
           ],
   },
   {
