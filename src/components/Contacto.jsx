@@ -10,7 +10,7 @@ const Contacto = () => {
         <a href="mailto:alejandro.the.developer@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
-        <a href="https://es.linkedin.com/pub/alejandroperezrodriguez" target="_blank" rel="noopener noreferrer">
+        <a href="https://es.linkedin.com/in/alejandroperezrodriguez" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
         <a href="https://www.instagram.com/alexmcanawer/" target="_blank" rel="noopener noreferrer">
