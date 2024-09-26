@@ -9,5 +9,5 @@ Welcome to my portfolio and CV repository! I'm Alejandro Perez, a passionate ful
 
 ### 📫 Get in Touch
 - **Email:** [alejandro.the.developer@gmail.com](mailto:alejandro.the.developer@gmail.com)
-- **LinkedIn:** [linkedin.com/in/alejandro-p%C3%A9rez-rodr%C3%ADguez-73156642](https://www.linkedin.com/in/alejandro-p%C3%A9rez-rodr%C3%ADguez-73156642/)
+- **LinkedIn:** [linkedin.com/in/alejandroperezrodriguez](https://www.linkedin.com/in/alejandroperezrodriguez)
 
